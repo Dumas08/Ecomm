@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import logo1 from "./logo1.svg";
 import search_icon from "./search_icon.svg";
 import user_icon from "./user_icon.svg";
 import cart_icon from "./cart_icon.svg";
@@ -58,9 +59,14 @@ import Keyboard8 from "./Keyboard8.png";
 import Mouse1 from "./Mouse1.png";
 import Mouse2 from "./Mouse2.png";
 import Mouse3 from "./Mouse3.png";
+import grey_bg_1 from "./grey_bg_1.png";
+import grey_bg_2 from "./grey_bg_2.png";
+import grey_bg_3 from "./grey_bg_3.png";
+
 
 
 export const assets = {
+  logo1,
   Keyboard1,
   Keyboard2,
   Keyboard3,
@@ -72,6 +78,9 @@ export const assets = {
   Mouse1,
   Mouse2,
   Mouse3,
+  grey_bg_1,
+  grey_bg_2,
+  grey_bg_3, 
   logo,
   search_icon,
   user_icon,
@@ -159,8 +168,8 @@ export const productsDummyData = [
   {
     "_id": "67a1f4e43f34a77b6dde9144",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "MSI Vigor GK70 CHERRY",
-    "description": "Apple AirPods Pro (2nd Gen) with MagSafe Case (USB-C) provide excellent sound, active noise cancellation, and a comfortable fit. The USB-C case ensures quick charging, and they pair seamlessly with Apple devices for an effortless audio experience.",
+    "name": "NeonPulse Gaming Keyboard",
+    "description": "The NeonPulse Gaming Keyboard is a high-performance mechanical keyboard designed for gamers and typists alike. Featuring a sleek, ergonomic design, this keyboard not only enhances your gaming experience but also adds a vibrant flair to your gaming setup.",
     "price": 499.99,
     "offerPrice": 399.99,
     "image": [
@@ -173,8 +182,8 @@ export const productsDummyData = [
   {
     "_id": "67a1f52e3f34a77b6dde914a",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Redragon FIZZ K1617 SE",
-    "description": "The Bose QuietComfort 45 headphones are engineered for exceptional sound quality and unparalleled noise cancellation. With a 24-hour battery life and comfortable, lightweight design, these headphones deliver premium audio for any environment. Whether on a flight, in the office, or at home, the Bose QC45 blocks out distractions, offering an immersive listening experience.",
+    "name": "LuminaTech Rainbow Keyboard",
+    "description": "The LuminaTech Rainbow Keyboard features a stunning transparent casing that showcases a spectrum of vibrant, customizable RGB backlighting. Each keycap is designed to emit different colors, creating an eye-catching visual experience.",
     "price": 429.99,
     "offerPrice": 329.99,
     "image": [
@@ -188,7 +197,7 @@ export const productsDummyData = [
     "_id": "67a1f5663f34a77b6dde914c",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
     "name": "NightFox Mechanical Keyboard",
-    "description": "The Samsung Galaxy S23 offers an all-encompassing mobile experience with its advanced AMOLED display, offering vibrant visuals and smooth interactions. Equipped with top-of-the-line fitness tracking features and cutting-edge technology, this phone delivers outstanding performance. With powerful hardware, a sleek design, and long battery life, the S23 is perfect for those who demand the best in mobile innovation.",
+    "description": "Anyone looking to enhance their desktop aesthetics with a modern keyboard design. It can elevate your typing experience with the NightFox Mechanical Keyboard, a perfect blend of style and functionality designed for gamers and professionals alike.",
     "price": 899.99,
     "offerPrice": 799.99,
     "image": [
@@ -201,8 +210,8 @@ export const productsDummyData = [
   {
     "_id": "67a1f5993f34a77b6dde914e",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Wireless Mechanical Keyboard",
-    "description": "The Garmin Venu 2 smartwatch blends advanced fitness tracking with sophisticated design, offering a wealth of features such as heart rate monitoring, GPS, and sleep tracking. Built with a 24-hour battery life, this watch is ideal for fitness enthusiasts and anyone looking to enhance their daily lifestyle. With a stunning AMOLED display and customizable watch faces, the Venu 2 combines technology with style seamlessly.",
+    "name": "Q-Tech ProType Keyboard",
+    "description": "The Q-Tech ProType Keyboard combines efficiency, comfort, and durability, making it an essential tool for anyone looking to enhance their typing experience. It also features a comfortable wrist rest for prolonged typing sessions.",
     "price": 399.99,
     "offerPrice": 349.99,
     "image": [
@@ -215,8 +224,8 @@ export const productsDummyData = [
   {
     "_id": "67a1f5ef3f34a77b6dde9150",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Logitech G903 Lightspeed",
-    "description": "The PlayStation 5 takes gaming to the next level with ultra-HD graphics, a powerful 825GB SSD, and ray tracing technology for realistic visuals. Whether you're into high-action games or immersive storytelling, the PS5 delivers fast loading times, seamless gameplay, and stunning visuals. It's a must-have for any serious gamer looking for the ultimate gaming experience.",
+    "name": "HyperGlide Pro Wireless Gaming Mouse",
+    "description": "Dominate your gameplay with the HyperGlide Pro Wireless Gaming Mouse, a premium device engineered for elite performance and ultra-fast response. Featuring a sleek matte black finish with an illuminated.",
     "price": 599.99,
     "offerPrice": 499.99,
     "image": [
@@ -229,8 +238,8 @@ export const productsDummyData = [
   {
     "_id": "67a1f70c3f34a77b6dde9156",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Dell WM123 Optical Mouse",
-    "description": "The Canon EOS R5 is a game-changing mirrorless camera with a 45MP full-frame sensor, offering ultra-high resolution and the ability to shoot 8K video. Whether you're capturing professional-quality stills or cinematic video footage, this camera delivers exceptional clarity, speed, and color accuracy. With advanced autofocus and in-body stabilization, the R5 is ideal for photographers and videographers alike.",
+    "name": "SwiftClick Wireless Optical Mouse",
+    "description": "Experience seamless navigation with the SwiftClick Wireless Optical Mouse – a sleek, ergonomic solution designed for comfort and precision. Featuring a responsive optical sensor, smooth scroll wheel, and compact, ambidextrous design, this wireless mouse is perfect for both office work and on-the-go productivity.",
     "price": 4199.99,
     "offerPrice": 3899.99,
     "image": [
@@ -243,8 +252,8 @@ export const productsDummyData = [
   {
     "_id": "67a1f7c93f34a77b6dde915a",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "RGB Rechargeable Mouse",
-    "description": "The MacBook Pro 16, powered by Apple's M2 Pro chip, offers outstanding performance with 16GB RAM and a 512GB SSD. Whether you're editing high-resolution video, developing software, or multitasking with ease, this laptop can handle the toughest tasks. It features a stunning Retina display with True Tone technology, making it a top choice for professionals in creative industries or anyone who demands premium performance in a portable form.",
+    "name": "ThunderStrike RGB Gaming Mouse",
+    "description": "Unleash your gaming potential with the ThunderStrike RGB Gaming Mouse – a high-performance, wireless powerhouse built for serious gamers. Equipped with customizable RGB lighting, precision-engineered DPI settings, and a futuristic design, this mouse blends style and functionality. The ultra-responsive optical sensor ensures pinpoint accuracy, while the ergonomic build keeps you comfortable through long sessions. Featuring a rechargeable battery and USB nano receiver, the ThunderStrike offers seamless wireless freedom and lightning-fast response times, making it your ultimate weapon on the digital battlefield.",
     "price": 2799.99,
     "offerPrice": 2499.99,
     "image": [
@@ -257,8 +266,8 @@ export const productsDummyData = [
   {
     "_id": "67a1f8363f34a77b6dde915c",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Corsair K60 RGB PRO Mechanical Keyboard",
-    "description": "Sony WF-1000XM5 true wireless earbuds deliver immersive sound with Hi-Res Audio and advanced noise cancellation technology. Designed for comfort and quality, they provide a stable, snug fit for a secure listening experience. Whether you're working out or traveling, these earbuds will keep you connected with the world around you while enjoying rich, clear sound.",
+    "name": "AquaWave Mechanical Keyboard",
+    "description": "The AquaWave Mechanical Keyboard is a stylish, functional, and customizable input device that elevates both gaming and productivity. Perfect for anyone looking to enhance their typing experience with a touch of personality, bringing a fresh and modern aesthetic to any workspace or gaming setup.",
     "price": 349.99,
     "offerPrice": 299.99,
     "image": [
@@ -271,8 +280,8 @@ export const productsDummyData = [
   {
     "_id": "67a1f85e3f34a77b6dde915e",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Coolermaster SK622 Wireless Mechanical Keyboard",
-    "description": "The Samsung 4K Projector offers an immersive cinematic experience with ultra-high-definition visuals and realistic color accuracy. Equipped with a built-in speaker, it delivers rich sound quality to complement its stunning 4K resolution. Perfect for movie nights, gaming, or presentations, this projector is the ultimate choice for creating an at-home theater experience or professional setting.",
+    "name": "NeonGlow Compact  Keyboard",
+    "description": "Featuring a modern, minimalist layout that enhances any workspace and a compact size ideal for gamers and professionals.",
     "price": 1699.99,
     "offerPrice": 1499.99,
     "image": [
@@ -285,8 +294,8 @@ export const productsDummyData = [
   {
     "_id": "67a1fa4b3f34a77b6dde9166",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "name": "Corsair K65 Plus Wireless Keyboard",
-    "description": "The ASUS ROG Zephyrus G16 gaming laptop is powered by the Intel Core i9 processor and features an RTX 4070 GPU, delivering top-tier gaming and performance. With 16GB of RAM and a 1TB SSD, this laptop is designed for gamers who demand extreme power, speed, and storage. Equipped with a stunning 16-inch display, it's built to handle the most demanding titles and applications with ease.",
+    "name": " AuraTouch Compact  Keyboard",
+    "description": "The AuraTouch Compact Keyboard features a modern minimalist design with a glossy white finish that complements any workspace or gaming setup.",
     "price": 2199.99,
     "offerPrice": 1999.99,
     "image": [
@@ -300,7 +309,7 @@ export const productsDummyData = [
 
 export const userDummyData = {
   "_id": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-  "name": "GreatStack",
+  "name": "Sample User",
   "email": "admin@example.com",
   "imageUrl": "https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18ycnlnUnFiUDBYT2dEZ2h1ZmRXcGlpdWV5OXoiLCJyaWQiOiJ1c2VyXzJzWkZIUzFVSUl5c0p5RFZ6Q3BRaFVoVElodyJ9",
   "cartItems": {
@@ -318,7 +327,7 @@ export const orderDummyData = [
         "product": {
           "_id": "67a1f4e43f34a77b6dde9144",
           "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-          "name": "Apple AirPods Pro",
+          "name": "NeonPulse Gaming Keyboard",
           "description": "Apple AirPods Pro (2nd Gen) with MagSafe Case (USB-C) provide excellent sound, active noise cancellation, and a comfortable fit. The USB-C case ensures quick charging, and they pair seamlessly with Apple devices for an effortless audio experience.",
           "price": 499.99,
           "offerPrice": 399.99,
@@ -328,7 +337,7 @@ export const orderDummyData = [
             "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667238/niw7tqxvjsxt7wcehxeo.png",
             "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667237/h8cq4x9cfzqzwaiarvpk.png"
           ],
-          "category": "Earphone",
+          "category": "Keyboard",
           "date": 1738667236865,
           "__v": 0
         },
@@ -340,7 +349,7 @@ export const orderDummyData = [
     "address": {
       "_id": "67a1e4233f34a77b6dde9055",
       "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-      "fullName": "GreatStack",
+      "fullName": "Sample User",
       "phoneNumber": "0123456789",
       "pincode": 654321,
       "area": "Main Road , 123 Street, G Block",
@@ -360,14 +369,14 @@ export const orderDummyData = [
         "product": {
           "_id": "67a1f52e3f34a77b6dde914a",
           "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-          "name": "Bose QuietComfort 45",
+          "name": "LuminaTech Rainbow Keyboard",
           "description": "The Bose QuietComfort 45 headphones are engineered for exceptional sound quality and unparalleled noise cancellation. With a 24-hour battery life and comfortable, lightweight design, these headphones deliver premium audio for any environment. Whether on a flight, in the office, or at home, the Bose QC45 blocks out distractions, offering an immersive listening experience.",
           "price": 429.99,
           "offerPrice": 329.99,
           "image": [
             "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667311/m16coelz8ivkk9f0nwrz.png"
           ],
-          "category": "Headphone",
+          "category": "Keyboard",
           "date": 1738667310300,
           "__v": 0
         },
@@ -379,7 +388,7 @@ export const orderDummyData = [
     "address": {
       "_id": "67a1e4233f34a77b6dde9055",
       "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-      "fullName": "GreatStack",
+      "fullName": "Sample User",
       "phoneNumber": "0123456789",
       "pincode": 654321,
       "area": "Main Road , 123 Street, G Block",
@@ -399,7 +408,7 @@ export const orderDummyData = [
         "product": {
           "_id": "67a1f4e43f34a77b6dde9144",
           "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-          "name": "Apple AirPods Pro",
+          "name": "ThunderStrike RGB Gaming Mouse",
           "description": "Apple AirPods Pro (2nd Gen) with MagSafe Case (USB-C) provide excellent sound, active noise cancellation, and a comfortable fit. The USB-C case ensures quick charging, and they pair seamlessly with Apple devices for an effortless audio experience.",
           "price": 499.99,
           "offerPrice": 399.99,
@@ -409,7 +418,7 @@ export const orderDummyData = [
             "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667238/niw7tqxvjsxt7wcehxeo.png",
             "https://res.cloudinary.com/djbvf02yt/image/upload/v1738667237/h8cq4x9cfzqzwaiarvpk.png"
           ],
-          "category": "Earphone",
+          "category": "Mouse",
           "date": 1738667236865,
           "__v": 0
         },
@@ -421,7 +430,7 @@ export const orderDummyData = [
     "address": {
       "_id": "67a1e4233f34a77b6dde9055",
       "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-      "fullName": "GreatStack",
+      "fullName": "Sample User",
       "phoneNumber": "0123456789",
       "pincode": 654321,
       "area": "Main Road , 123 Street, G Block",
@@ -439,7 +448,7 @@ export const addressDummyData = [
   {
     "_id": "67a1e4233f34a77b6dde9055",
     "userId": "user_2sZFHS1UIIysJyDVzCpQhUhTIhw",
-    "fullName": "GreatStack",
+    "fullName": "Sample User",
     "phoneNumber": "0123456789",
     "pincode": 654321,
     "area": "Main Road , 123 Street, G Block",

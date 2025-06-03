@@ -5,10 +5,11 @@ import { assets, BagIcon, BoxIcon, CartIcon, HomeIcon } from "@/assets/assets";
 import Link from "next/link";
 import { useAppContext } from "@/context/AppContext";
 import Image from "next/image";
-import { SignInButton, UserButton } from "@clerk/nextjs";
+import { SignInButton, UserButton, useUser } from "@clerk/nextjs"; // <-- import useUser
 
 const Navbar = () => {
-  const { isSeller, router, user } = useAppContext();
+  const { isSeller, router } = useAppContext();
+  const { isSignedIn } = useUser(); // <-- get sign-in status
 
   return (
     <nav className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-3 border-b border-gray-300 text-gray-700">
@@ -16,7 +17,7 @@ const Navbar = () => {
       <Image
         className="cursor-pointer w-28 md:w-32"
         onClick={() => router.push("/")}
-        src={assets.logo}
+        src={assets.logo1}
         alt="logo"
       />
 
@@ -40,7 +41,7 @@ const Navbar = () => {
             onClick={() => router.push("/seller")}
             className="text-xs border px-4 py-1.5 rounded-full"
           >
-            Seller Dashboard
+            Admin
           </button>
         )}
       </div>
@@ -52,7 +53,7 @@ const Navbar = () => {
           src={assets.search_icon}
           alt="search icon"
         />
-        {user ? (
+        {isSignedIn ? ( // <-- use isSignedIn
           <UserButton>
             <UserButton.MenuItems>
               <UserButton.Action label="Cart" labelIcon={<CartIcon />} onClick={()=>router.push('/cart')}/>
@@ -78,10 +79,10 @@ const Navbar = () => {
             onClick={() => router.push("/seller")}
             className="text-xs border px-4 py-1.5 rounded-full"
           >
-            Seller Dashboard
+            Admin
           </button>
         )}
-        {user ? (
+        {isSignedIn ? ( // <-- use isSignedIn
           <UserButton>
             <UserButton.MenuItems>
               <UserButton.Action label="Home" labelIcon={<HomeIcon />} onClick={()=>router.push('/')}/>
