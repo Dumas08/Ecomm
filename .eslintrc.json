@@ -1,0 +1,15 @@
+{
+  "extends": ["next/core-web-vitals"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2022": true
+  },
+  "globals": {
+    "console": "readonly",
+    "process": "readonly",
+    "Response": "readonly",
+    "Request": "readonly",
+    "fetch": "readonly"
+  }
+} 
