@@ -2,7 +2,12 @@ import { Inngest } from "inngest";
 import connectDB from "./db";
 
 // Create a client to send and receive events
-export const inngest = new Inngest({ id: "clicks&types-next" });   
+export const inngest = {
+  send: async ({ name, data }) => {
+    // Implement your event sending logic here
+    console.log(`Mock send: ${name}`, data);
+  }
+};
 
 export const syncUserCreation = inngest.createFunction(
     {

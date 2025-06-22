@@ -1,6 +1,6 @@
 import { Webhook } from 'svix';
 import { headers } from 'next/headers';
-import { inngest } from '../../../../config/inngest';
+import { inngest } from '@/config/inngest';
 
 export async function POST(req) {
   // Get the headers
