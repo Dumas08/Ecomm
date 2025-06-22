@@ -15,11 +15,12 @@ export const AppContextProvider = (props) => {
     const currency = process.env.NEXT_PUBLIC_CURRENCY
     const router = useRouter()
 
-    const user = useUser();
+    const clerkUser = useUser();
 
     const [products, setProducts] = useState([])
     const [userData, setUserData] = useState(false)
-    const [isSeller, setIsSeller] = useState(true)
+    const [isSeller, setIsSeller] = useState(false)
+    const [isAdmin, setIsAdmin] = useState(false)
     const [cartItems, setCartItems] = useState({})
 
     const fetchProductData = async () => {
@@ -27,11 +28,24 @@ export const AppContextProvider = (props) => {
     }
 
     const fetchUserData = async () => {
-        setUserData(userDummyData)
+        try {
+            // Support both Clerk v4 and v5 user object shapes
+            const currentUser = clerkUser.user || clerkUser;
+            if (currentUser && currentUser.publicMetadata) {
+                console.log("User role:", currentUser.publicMetadata.role); // Debug
+                setIsSeller(currentUser.publicMetadata.role === 'seller');
+                setIsAdmin(currentUser.publicMetadata.role === 'admin');
+            } else {
+                setIsSeller(false);
+                setIsAdmin(false);
+            }
+            setUserData(userDummyData)
+        } catch (error) {
+            console.error(error);
+        }
     }
 
     const addToCart = async (itemId) => {
-
         let cartData = structuredClone(cartItems);
         if (cartData[itemId]) {
             cartData[itemId] += 1;
@@ -40,11 +54,9 @@ export const AppContextProvider = (props) => {
             cartData[itemId] = 1;
         }
         setCartItems(cartData);
-
     }
 
     const updateCartQuantity = async (itemId, quantity) => {
-
         let cartData = structuredClone(cartItems);
         if (quantity === 0) {
             delete cartData[itemId];
@@ -52,7 +64,6 @@ export const AppContextProvider = (props) => {
             cartData[itemId] = quantity;
         }
         setCartItems(cartData)
-
     }
 
     const getCartCount = () => {
@@ -69,7 +80,7 @@ export const AppContextProvider = (props) => {
         let totalAmount = 0;
         for (const items in cartItems) {
             let itemInfo = products.find((product) => product._id === items);
-            if (cartItems[items] > 0) {
+            if (cartItems[items] > 0 && itemInfo) {
                 totalAmount += itemInfo.offerPrice * cartItems[items];
             }
         }
@@ -81,13 +92,17 @@ export const AppContextProvider = (props) => {
     }, [])
 
     useEffect(() => {
-        fetchUserData()
-    }, [])
+        const currentUser = clerkUser.user || clerkUser;
+        if (currentUser && currentUser.publicMetadata) {
+            fetchUserData()
+        }
+    }, [clerkUser])
 
     const value = {
-        user, 
+        user: clerkUser.user || clerkUser, 
         currency, router,
         isSeller, setIsSeller,
+        isAdmin, setIsAdmin,
         userData, fetchUserData,
         products, fetchProductData,
         cartItems, setCartItems,
